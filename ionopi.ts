@@ -1,13 +1,13 @@
 import * as fs from "fs";
 import {
-    AiIdType, DeviceOptionsType,
+    AiIdType, AiOptionType, DeviceOptionsType,
     DiIdType,
     IonopiDeviceType,
     LedValueType, OcIdType,
     OcValueType,
     RelayIdType,
     RelayValueType,
-    WiegandIdType
+    WiegandIdType, WiegandOptionType
 } from "./ionopi.type";
 
 /**
@@ -40,10 +40,11 @@ export class Ionopi {
     /**
      * Reads the value of the analog input.
      * @param id [ 1 | 2 | 3 | 4 ] - id of the analog input
+     * @param option: ["mv"(default) | "raw"]
      */
-    public ai(id: AiIdType): Promise<number> {
+    public ai(id: AiIdType, option: AiOptionType = "mv"): Promise<number> {
         return new Promise<number>((resolve, reject) => {
-            this.read("analog_in", id)
+            this.read("analog_in", id, option)
                 .then((content) => { resolve(Number(content)); })
                 .catch((errRead) => { reject(errRead); });
 
@@ -170,10 +171,11 @@ export class Ionopi {
     /**
      * This method is not yet operational. Only read available.
      * @param id
+     * @param option
      */
-    public wiegand(id: WiegandIdType): Promise<any> {
+    public wiegand(id: WiegandIdType, option: WiegandOptionType = "enabled"): Promise<any> {
         return new Promise<any>((resolve, reject) => {
-            this.read("wiegand", id)
+            this.read("wiegand", id, option)
                 .then((content) => { resolve(content); })
                 .catch((errRead) => { reject(errRead); });
         });
