@@ -1,4 +1,4 @@
-#Iono Pi Node Typescript module
+# Iono Pi Node Typescript module
  * Version: 1.0
  
 ## Description
@@ -6,19 +6,19 @@ This project is a Node script (typescript) for the Iono Pi board from Sfera-labs
 You can read the inputs and control the outputs very easily on your Node project thanks to the "IonoPi" class. \
 Consult the installation and use instructions to integrate it into your project.
 
-##Requirement:
+## Requirement:
 - Raspberry Pi
 - Iono Pi board
 - Node.js with Typescript
 - iono-pi-kernel-module from sfera-labs (https://github.com/sfera-labs/iono-pi-kernel-module)
 
-##Installation
+## Installation
 Git clone this project in your project\
 https://github.com/Dalidos/iono-pi-node
 
 Developed in Typescript, compilation in Javascript is provided in the "js" folder.
 
-##Usage
+## Usage
 
 ```typescript
     import {Ionopi} from "<your project path>/ionopi/ionopi";
@@ -135,10 +135,10 @@ Developed in Typescript, compilation in Javascript is provided in the "js" folde
      * ===============================================
      */
 ```
-###Wiegand and 1-Wire
+### Wiegand and 1-Wire
 WIEGAND and 1-WIRE are not developed yet because the original project did not need this. If you want, you can help develop these features.
 
-##Licence:
+## Licence:
 MIT
 
 ## Author:
