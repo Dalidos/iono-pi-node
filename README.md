@@ -1,5 +1,10 @@
 #Iono Pi Node Typescript module
  * Version: 1.0
+ 
+## Description
+This project is a Node script (typescript) for the Iono Pi board from Sfera-labs (https://www.sferalabs.cc/iono-pi/). \
+You can read the inputs and control the outputs very easily on your Node project thanks to the "IonoPi" class. \
+Consult the installation and use instructions to integrate it into your project.
 
 ##Requirement:
 - Raspberry Pi
